@@ -1,6 +1,6 @@
  FROM golang:alpine AS build-env
-WORKDIR /usr/local/go/src/github.com/nirajvishwakrma/keel-prac
-COPY . /usr/local/go/src/github.com/nirajvishwakrma/keel-prac
+WORKDIR /usr/local/go/src/github.com/nirajvishwakarma/keel-prac
+COPY . /usr/local/go/src/github.com/nirajvishwakarma/keel-prac
 RUN go install -ldflags="-w -s"
 
 FROM alpine:latest
