@@ -20,7 +20,7 @@ spec:
         app: pushwf
     spec:     
       containers:                    
-        - image: vishwakarmaniraj/keel-prac:latest
+        - image: vishwakarmaniraj/keel-prac
           imagePullPolicy: Always # this is required to force pull image     
           name: pushwf
           ports:
