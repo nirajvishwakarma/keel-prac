@@ -27,7 +27,7 @@ spec:
           imagePullPolicy: Always # this is required to force pull image     
           name: pushwf
           ports:
-            - containerPort: 8500
+            - containerPort: 80
               #livenessProbe:
               # httpGet:
               #path: /
@@ -43,8 +43,8 @@ spec:
   selector:
     app: pushwf
   ports:
-    - port: 8500
-      targetPort: 8500
+    - port: 80
+      targetPort: 80
   type: LoadBalancer
 ---
 apiVersion: extensions/v1beta1
@@ -59,4 +59,4 @@ spec:
       - path: /
         backend:
           serviceName: pushwf
-          servicePort: 8500
+          servicePort: 80
